@@ -1,3 +1,19 @@
 // Place all the styles related to the Polls controller here.
 // They will automatically be included in application.css.
 // You can use Sass (SCSS) here: http://sass-lang.com/
+
+.side{
+    display: inline-block;
+    height: 10px;
+    margin: 5px;
+}
+
+.side #one{
+    width: 35%;
+    float: left;
+}
+
+.side #two{
+    width: 35%;
+    float: right;
+}

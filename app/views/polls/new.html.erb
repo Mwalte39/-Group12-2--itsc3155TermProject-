@@ -9,10 +9,43 @@
     <a href="">VIEW YOUR RESULTS</a>
 </div>
 
-<div id = "description">
-    <p id=paragraph>
-        Create a Poll HERE!
-    </p>
+<div id = "pollForm">
+    <%= form_for :poll do |f| %>
+        <p>
+            <%= f.label :PollQuestion, "Question: " %> <br>
+            <%= f.text_field :PollQuestion %> <br>
+            
+        </p>
+        
+        <hr>
+        <div class="side">
+            <p id = "one">
+                <%= f.label :PollOption1, "Option 1: "  %>
+                <%= f.text_field :PollOption1 %> 
+            </p>
+            <p id = "two"></p>
+                <%= f.label :PollOption2, "Option 2: " %> 
+                <%= f.text_field :PollOption2 %> 
+            </p>
+        </div>
+        
+        <br>
+        
+        <div class="side">
+            <p id = "three"></p>
+                <%= f.label :PollOption3, "Option 3: " %> 
+                <%= f.text_field :PollOption3 %> 
+            </p>
+            <p id = "four">
+                <%= f.label :PollOption4, "Option 4: " %> 
+                <%= f.text_field :PollOption4 %> 
+            </p>
+        </div>
+        
+        <p>
+            <%= f.submit %>
+        </p>
+    <% end %>
 </div>
 
 <div id="footer">
