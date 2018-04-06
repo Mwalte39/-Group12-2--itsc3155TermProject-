@@ -10,8 +10,9 @@
 </div>
 
 <div id = "pollForm">
-    <%= form_for :poll do |f| %>
     <div id="pollcontainer">
+    <%= form_for :poll, url: polls_path do |f| %>
+    
         <p>
             <%= f.text_field :PollQuestion, :placeholder => "Enter Poll Name" %>
         </p>
@@ -34,8 +35,9 @@
         <p>
             <%= f.submit %>
         </p>
-        </div>
+        
     <% end %>
+    </div>
 </div>
 
 <div id="footer">
