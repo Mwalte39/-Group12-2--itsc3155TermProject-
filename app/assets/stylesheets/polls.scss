@@ -2,6 +2,18 @@
 // They will automatically be included in application.css.
 // You can use Sass (SCSS) here: http://sass-lang.com/
 
+#pollcontainer{
+    width: 750px;
+    display: flex;
+    align-items: center;
+    justify-items: center;
+    flex-wrap: wrap;
+}
+
+input[type=text]{
+    width: 50%;
+}
+
 .side{
     display: inline-block;
     height: 10px;
