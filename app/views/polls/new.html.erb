@@ -11,40 +11,29 @@
 
 <div id = "pollForm">
     <%= form_for :poll do |f| %>
+    <div id="pollcontainer">
         <p>
-            <!--<%= f.label :PollQuestion, "Question: " %> <br>-->
-            <%= f.text_field :PollQuestion, :placeholder => "Enter Poll Name" %> <br>
-            
+            <%= f.text_field :PollQuestion, :placeholder => "Enter Poll Name" %>
         </p>
-        
-        <br>
-        <div id="pollcontainer">
-            <!--<div class="side">-->
-                <p id = "one">
-                    <!--<%= f.label :PollOption1, "Option 1: "  %>-->
-                    <%= f.text_field :PollOption1, :placeholder => "Option 1"%> 
-                </p>
-                <p id = "two"></p>
-                    <!--<%= f.label :PollOption2, "Option 2: " %> -->
-                    <%= f.text_field :PollOption2, :placeholder => "Option 2" %> 
-                </p>
-            
-            <!--<br>-->
-            
-            <!--<div class="side">-->
-                <p id = "three"></p>
-                    <!--<%= f.label :PollOption3, "Option 3: " %> -->
-                    <%= f.text_field :PollOption3, :placeholder => "Option 3" %> 
-                </p>
-                <p id = "four">
-                    <!--<%= f.label :PollOption4, "Option 4: " %> -->
-                    <%= f.text_field :PollOption4, :placeholder => "Option 4" %> 
-                </p>
-            <!--</div>-->
-            
-            <p>
-                <%= f.submit %>
-            </p>
+        <p id = "one">
+            <!--<%= f.label :PollOption1, "Option 1: "  %>-->
+            <%= f.text_field :PollOption1, :placeholder => "Option 1"%> 
+        </p>
+        <p id = "two">
+            <!--<%= f.label :PollOption2, "Option 2: " %> -->
+            <%= f.text_field :PollOption2, :placeholder => "Option 2" %> 
+        </p>
+        <p id = "three">
+            <!--<%= f.label :PollOption3, "Option 3: " %> -->
+            <%= f.text_field :PollOption3, :placeholder => "Option 3" %> 
+        </p>
+        <p id = "four">
+            <!--<%= f.label :PollOption4, "Option 4: " %> -->
+            <%= f.text_field :PollOption4, :placeholder => "Option 4" %> 
+        </p>
+        <p>
+            <%= f.submit %>
+        </p>
         </div>
     <% end %>
 </div>

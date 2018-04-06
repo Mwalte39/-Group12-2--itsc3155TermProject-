@@ -2,30 +2,47 @@
 // They will automatically be included in application.css.
 // You can use Sass (SCSS) here: http://sass-lang.com/
 
-#pollcontainer{
-    width: 750px;
+
+#pollcontainer p{
+    left: 50%;
     display: flex;
     align-items: center;
-    justify-items: center;
+    justify-content: center;
     flex-wrap: wrap;
+    flex-direction: column;
+    padding-bottom: 5px;
+    
+}
+
+#poll_PollQuestion{
+    background-color: #f79e7e;
+    color: #bc3b31;
+}
+
+#poll_PollQuestion::placeholder{
+    color: #e46d60;
 }
 
 input[type=text]{
-    width: 50%;
+    width: 500px;
+    height: 50px;
+    padding-left: 10px;
+    border: none;
+    background-color: #fff8d5;
+    color: #d1892a;
+    font-size: 24px;
+    font-weight: 400;
 }
 
-.side{
-    display: inline-block;
-    height: 10px;
-    margin: 5px;
+input[type=text]::placeholder{
+    color: #feca7d;
 }
 
-.side #one{
-    width: 35%;
-    float: left;
-}
-
-.side #two{
-    width: 35%;
-    float: right;
+input[type=button], input[type=submit]{
+    border: none;
+    background-color: #8f1840;
+    color: #f05939;
+    font-size: 18px;
+    font-weight: 300;
+    padding: 10px;
 }

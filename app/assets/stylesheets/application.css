@@ -46,11 +46,12 @@ body {
 	width: 100%;
 	text-align: center;
 	color: #9f216f;
+	bottom: 0;
+	position: fixed;
 }
 
 #footer p{
 	font-size: 28px;
-	display: inline-block;
 }
 
 #navbar {
