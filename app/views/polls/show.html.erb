@@ -1,0 +1,37 @@
+<head><link href="https://fonts.googleapis.com/css?family=Roboto:100,300,400" rel="stylesheet"></head>
+<div id = "header">
+    <h1>VOTE MASTER</h1>
+    <h2>A SIMPLE VOTECASTING PLATFORM<h2>
+</div>
+
+<div id = "navbar">
+    <a href="">CREATE NEW POLL</a>
+    <a href="">VIEW YOUR RESULTS</a>
+</div>
+
+<div id = "pollForm">
+    <p>
+        <h1>Question:</h1>
+        <%= @poll.question %>
+    </p>
+    <p>
+        <h1>A1:</h1>
+        <%= @poll.answer1 %>
+        <br>
+        <h1>A2:</h1>
+        <%= @poll.answer2 %>
+        <br>
+        <h1>A3:</h1>
+        <%= @poll.answer3 %>
+        <br>
+        <h1>A4:</h1>
+        <%= @poll.answer4 %>
+        <br>
+    </p>
+</div>
+
+<div id="footer">
+    <p>
+        TEAM 12
+    </p>
+</div>

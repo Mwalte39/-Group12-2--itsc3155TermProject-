@@ -1,9 +1,21 @@
 class PollsController < ApplicationController
+    def show
+       @poll = Poll.find(params[:id]) 
+    end
+    
     def new
         
     end
     
     def create
-        render plain: params[:poll].inspect
+        @poll = Poll.new(poll_params)
+        
+        @poll.save
+        redirect_to @poll
     end
 end
+
+private
+    def poll_params
+       params.require(:poll).permit(:question, :answer1, :answer2, :answer3, :answer4) 
+    end
