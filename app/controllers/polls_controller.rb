@@ -11,6 +11,15 @@ class PollsController < ApplicationController
         @poll = Poll.find(params[:id])
     end
     
+     def update
+        @poll = Poll.find(params[:id])
+        if @poll.update(poll_params)
+            redirect_to @poll
+        else
+            render 'edit'
+        end
+    end
+    
     def destroy
         @poll = Poll.find(params[:id])
         @poll.destroy

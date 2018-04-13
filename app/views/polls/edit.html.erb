@@ -11,7 +11,7 @@
     
     <div id = "pollForm">
     <div id="pollcontainer">
-    <%= form_for :poll, url: polls_path do |f| %>
+    <%= form_for @poll do |f| %>
     
         <p>
             <%= f.text_field :question, :placeholder => "Enter Poll Name" %>
