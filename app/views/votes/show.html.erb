@@ -1,0 +1,26 @@
+<div id = "header">
+    <h1>VOTE MASTER</h1>
+    <h2>A SIMPLE VOTECASTING PLATFORM<h2>
+</div>
+
+<div id = "navbar">
+    <%= link_to 'CREATE NEW POLL', new_poll_url %>
+    <%= link_to 'VIEW OPEN POLLS', polls_path %>
+</div>
+
+<h2>Results</h2>
+
+<h3><%= @poll.answer1 %></h3>
+<%= @poll.votes.where(:selection => 1).count %>
+<h3><%= @poll.answer2 %></h3>
+<%= @poll.votes.where(:selection => 2).count %>
+<h3><%= @poll.answer3 %></h3>
+<%= @poll.votes.where(:selection => 3).count %>
+<h3><%= @poll.answer4 %></h3>
+<%= @poll.votes.where(:selection => 4).count %>
+
+<div id="footer">
+    <p>
+        TEAM 12
+    </p>
+</div>

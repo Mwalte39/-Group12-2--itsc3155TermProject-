@@ -1,0 +1,27 @@
+<div id = "header">
+    <h1>VOTE MASTER</h1>
+    <h2>A SIMPLE VOTECASTING PLATFORM<h2>
+</div>
+
+<div id = "navbar">
+    <%= link_to 'CREATE NEW POLL', new_poll_url %>
+    <%= link_to 'VIEW OPEN POLLS', polls_path %>
+</div>
+
+<% @polls.each do |poll| %>
+    <tr>
+        <h1>
+          <td><%= poll.question %></td>
+          <td><%= link_to 'Show', poll_path(poll) %></td>
+          <td><%= link_to 'Vote', new_poll_vote_url(poll) %></td>
+          <td><%= link_to 'Result', poll_vote_path(poll, poll.id) %></td>
+        </h1>
+        <br>
+    </tr>
+<% end %>
+  
+<div id="footer">
+    <p>
+        TEAM 12
+    </p>
+</div>

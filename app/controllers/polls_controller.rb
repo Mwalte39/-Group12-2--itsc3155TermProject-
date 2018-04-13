@@ -7,12 +7,18 @@ class PollsController < ApplicationController
         
     end
     
+    def index
+       @polls = Poll.all 
+    end
+    
     def create
         @poll = Poll.new(poll_params)
         
         @poll.save
         redirect_to @poll
     end
+    
+    
 end
 
 private
