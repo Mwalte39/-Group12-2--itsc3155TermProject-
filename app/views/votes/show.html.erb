@@ -1,3 +1,4 @@
+<head><link href="https://fonts.googleapis.com/css?family=Roboto:100,300,400" rel="stylesheet"></head>
 <div id = "header">
     <h1>VOTE MASTER</h1>
     <h2>A SIMPLE VOTECASTING PLATFORM<h2>
@@ -18,6 +19,8 @@
 <%= @poll.votes.where(:selection => 3).count %>
 <h3><%= @poll.answer4 %></h3>
 <%= @poll.votes.where(:selection => 4).count %>
+
+
 
 <div id="footer">
     <p>

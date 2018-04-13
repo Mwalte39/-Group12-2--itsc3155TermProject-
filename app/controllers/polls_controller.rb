@@ -7,6 +7,17 @@ class PollsController < ApplicationController
         
     end
     
+    def edit
+        @poll = Poll.find(params[:id])
+    end
+    
+    def destroy
+        @poll = Poll.find(params[:id])
+        @poll.destroy
+        
+        redirect_to polls_path
+    end
+    
     def index
        @polls = Poll.all 
     end

@@ -2,7 +2,7 @@ class VotesController < ApplicationController
     def create
         @poll = Poll.find(params[:poll_id])
         @vote = @poll.votes.create(vote_params) 
-        redirect_to polls_path
+        redirect_to poll_vote_path(@poll, @poll.id)
     end
     
     def index

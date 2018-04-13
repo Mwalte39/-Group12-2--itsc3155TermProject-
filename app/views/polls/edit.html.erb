@@ -1,0 +1,46 @@
+<head><link href="https://fonts.googleapis.com/css?family=Roboto:100,300,400" rel="stylesheet"></head>
+<div id = "header">
+    <h1>VOTE MASTER</h1>
+    <h2>A SIMPLE VOTECASTING PLATFORM<h2>
+</div>
+
+<div id = "navbar">
+    <%= link_to 'CREATE NEW POLL', new_poll_url %>
+    <%= link_to 'VIEW OPEN POLLS', polls_path %>
+</div>
+    
+    <div id = "pollForm">
+    <div id="pollcontainer">
+    <%= form_for :poll, url: polls_path do |f| %>
+    
+        <p>
+            <%= f.text_field :question, :placeholder => "Enter Poll Name" %>
+        </p>
+        <p id = "one">
+            <!--<%= f.label :answer1, "Option 1: "  %>-->
+            <%= f.text_field :answer1, :placeholder => "Option 1"%> 
+        </p>
+        <p id = "two">
+            <!--<%= f.label :answer2, "Option 2: " %> -->
+            <%= f.text_field :answer2, :placeholder => "Option 2" %> 
+        </p>
+        <p id = "three">
+            <!--<%= f.label :answer3, "Option 3: " %> -->
+            <%= f.text_field :answer3, :placeholder => "Option 3" %> 
+        </p>
+        <p id = "four">
+            <!--<%= f.label :answer4, "Option 4: " %> -->
+            <%= f.text_field :answer4, :placeholder => "Option 4" %> 
+        </p>
+        <p>
+            <%= f.submit %>
+        </p>
+        
+    <% end %>
+    </div>
+</div>
+<div id="footer">
+    <p>
+        TEAM 12
+    </p>
+</div>

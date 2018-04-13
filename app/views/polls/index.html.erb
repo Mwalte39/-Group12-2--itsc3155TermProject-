@@ -1,3 +1,4 @@
+<head><link href="https://fonts.googleapis.com/css?family=Roboto:100,300,400" rel="stylesheet"></head>
 <div id = "header">
     <h1>VOTE MASTER</h1>
     <h2>A SIMPLE VOTECASTING PLATFORM<h2>
@@ -12,9 +13,9 @@
     <tr>
         <h1>
           <td><%= poll.question %></td>
-          <td><%= link_to 'Show', poll_path(poll) %></td>
+          <td><%= link_to 'Manage Poll', poll_path(poll) %></td>
           <td><%= link_to 'Vote', new_poll_vote_url(poll) %></td>
-          <td><%= link_to 'Result', poll_vote_path(poll, poll.id) %></td>
+          <td><%= link_to 'Results', poll_vote_path(poll, poll.id) %></td>
         </h1>
         <br>
     </tr>
