@@ -14,22 +14,18 @@
     <%= form_for @poll do |f| %>
     
         <p>
-            <%= f.text_field :question, :placeholder => "Enter Poll Name" %>
+            <%= f.text_field :question, :placeholder => "Enter Poll Name", :id => 'pollquestion'%>
         </p>
         <p id = "one">
-            <!--<%= f.label :answer1, "Option 1: "  %>-->
             <%= f.text_field :answer1, :placeholder => "Option 1"%> 
         </p>
         <p id = "two">
-            <!--<%= f.label :answer2, "Option 2: " %> -->
             <%= f.text_field :answer2, :placeholder => "Option 2" %> 
         </p>
         <p id = "three">
-            <!--<%= f.label :answer3, "Option 3: " %> -->
             <%= f.text_field :answer3, :placeholder => "Option 3" %> 
         </p>
         <p id = "four">
-            <!--<%= f.label :answer4, "Option 4: " %> -->
             <%= f.text_field :answer4, :placeholder => "Option 4" %> 
         </p>
         <p>

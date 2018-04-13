@@ -1,3 +1,34 @@
 // Place all the styles related to the Votes controller here.
 // They will automatically be included in application.css.
 // You can use Sass (SCSS) here: http://sass-lang.com/
+
+#titleresult {
+	font-size: 24pt;
+	color: #fcbc6d;
+}
+
+#results {
+	display: flex;
+    align-items: center;
+    justify-content: center;
+    flex-wrap: wrap;
+    flex-direction: column;
+}
+
+.option{
+	display: flex;
+	flex-direction: row;
+	justify-content: space-between;
+	width: 500px;
+    height: 70px;
+    background-color: #fff8d5;
+    margin-bottom: 15px;
+    font-size: 24pt;
+    color: #c71f3b;
+}
+
+.option p{
+	margin-top: 10px;
+	margin-right: 10px;
+	margin-left: 10px;
+}

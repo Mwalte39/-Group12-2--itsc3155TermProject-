@@ -9,18 +9,31 @@
     <%= link_to 'VIEW OPEN POLLS', polls_path %>
 </div>
 
-<h2>Results</h2>
-
-<h3><%= @poll.answer1 %></h3>
-<%= @poll.votes.where(:selection => 1).count %>
-<h3><%= @poll.answer2 %></h3>
-<%= @poll.votes.where(:selection => 2).count %>
-<h3><%= @poll.answer3 %></h3>
-<%= @poll.votes.where(:selection => 3).count %>
-<h3><%= @poll.answer4 %></h3>
-<%= @poll.votes.where(:selection => 4).count %>
-
-
+<div id="resultbox">
+    <div id = "results">
+        <p id="titleresult">Results</p>
+        <div class="option">
+            <p class="question"><%= @poll.answer1 %></p>
+            <br>
+            <p class="numresult"><%= @poll.votes.where(:selection => 1).count %></p>
+        </div>
+        <div class="option">
+            <p class="question"><%= @poll.answer2 %></p>
+            <br>
+            <p class="numresult"><%= @poll.votes.where(:selection => 2).count %></p>
+        </div>
+        <div class="option">
+            <p class="question"><%= @poll.answer3 %></p>
+            <br>
+            <p class="numresult"><%= @poll.votes.where(:selection => 3).count %></p>
+        </div>
+        <div class="option">
+            <p class="question"><%= @poll.answer4 %></p>
+            <br>
+            <p class="numresult"><%= @poll.votes.where(:selection => 4).count %></p>
+        </div>
+    </div>
+</div>
 
 <div id="footer">
     <p>
