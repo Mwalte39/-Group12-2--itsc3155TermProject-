@@ -2,6 +2,7 @@
 // They will automatically be included in application.css.
 // You can use Sass (SCSS) here: http://sass-lang.com/
 
+//POLL ENTRY AND EDIT CSS BELOW
 
 #pollcontainer p{
     left: 50%;
@@ -46,3 +47,33 @@ input[type=button], input[type=submit]{
     font-weight: 300;
     padding: 10px;
 }
+
+//POLL INDEX CSS BELOW
+
+#pollindex{
+    display: flex;
+    justify-content: center;
+    flex-direction: column;
+    flex-wrap: wrap;
+    align-items: center;
+    padding-top: 20px;
+}
+
+.singlepoll {
+    display: flex;
+    flex-direction: row;
+    font-size: 24pt;
+    font-weight: 300;
+    color: #c71f3b;
+}
+
+.singlepoll p{
+    padding-right: 15px;
+    padding-left: 15px;
+}
+
+.singlepoll a{
+    color: #fec30d;
+}
+
+

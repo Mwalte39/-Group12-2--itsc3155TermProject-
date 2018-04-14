@@ -13,24 +13,24 @@
     <div id = "results">
         <p id="titleresult">Results</p>
         <div class="option">
-            <p class="question"><%= @poll.answer1 %></p>
+            <p><%= @poll.answer1 %></p>
             <br>
-            <p class="numresult"><%= @poll.votes.where(:selection => 1).count %></p>
+            <p><%= @poll.votes.where(:selection => 1).count %></p>
         </div>
         <div class="option">
-            <p class="question"><%= @poll.answer2 %></p>
+            <p><%= @poll.answer2 %></p>
             <br>
-            <p class="numresult"><%= @poll.votes.where(:selection => 2).count %></p>
+            <p><%= @poll.votes.where(:selection => 2).count %></p>
         </div>
         <div class="option">
-            <p class="question"><%= @poll.answer3 %></p>
+            <p><%= @poll.answer3 %></p>
             <br>
-            <p class="numresult"><%= @poll.votes.where(:selection => 3).count %></p>
+            <p><%= @poll.votes.where(:selection => 3).count %></p>
         </div>
         <div class="option">
-            <p class="question"><%= @poll.answer4 %></p>
+            <p><%= @poll.answer4 %></p>
             <br>
-            <p class="numresult"><%= @poll.votes.where(:selection => 4).count %></p>
+            <p><%= @poll.votes.where(:selection => 4).count %></p>
         </div>
     </div>
 </div>

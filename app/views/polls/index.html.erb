@@ -9,17 +9,18 @@
     <%= link_to 'VIEW OPEN POLLS', polls_path %>
 </div>
 
-<% @polls.each do |poll| %>
-    <tr>
-        <h1>
-          <td><%= poll.question %></td>
-          <td><%= link_to 'Manage Poll', poll_path(poll) %></td>
-          <td><%= link_to 'Vote', new_poll_vote_url(poll) %></td>
-          <td><%= link_to 'Results', poll_vote_path(poll, poll.id) %></td>
-        </h1>
-        <br>
-    </tr>
-<% end %>
+<div id="indexbox">
+    <div id="pollindex">
+        <% @polls.each do |poll| %>
+            <div class="singlepoll">
+                <p>POLL: <%= poll.question %>
+                <p><%= link_to 'Manage Poll', poll_path(poll) %></p>
+                <p><%= link_to 'Vote', new_poll_vote_url(poll) %></p>
+                <p><%= link_to 'Results', poll_vote_path(poll, poll.id) %></p>
+            </div>
+        <% end %>
+    </div>
+</div>
   
 <div id="footer">
     <p>
