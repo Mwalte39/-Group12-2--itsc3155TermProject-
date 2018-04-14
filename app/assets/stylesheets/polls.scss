@@ -76,4 +76,31 @@ input[type=button], input[type=submit]{
     color: #fec30d;
 }
 
+//POLL OVERVIEW CSS BELOW
 
+#pollForm {
+    display: flex;
+    justify-content: center;
+    flex-direction: column;
+    flex-wrap: wrap;
+    align-items: center;
+    color: #c71f3b;
+    font-size: 24pt;
+    margin-top: 10px;
+}
+
+.choice {
+    display: flex;
+    flex-direction: row;
+}
+
+.choice p{
+    padding-right: 5px;
+    margin: 10px;
+}
+
+.choice a{
+    padding-top: 30px;
+    padding-right: 20px;
+    color: #fec30d;
+} 

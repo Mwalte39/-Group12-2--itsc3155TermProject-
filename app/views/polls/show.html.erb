@@ -12,28 +12,33 @@
 
 <!-- Style Below Better Please -->
 <div id = "pollForm">
-    <p>
-        <h1>Question:</h1>
-        <%= @poll.question %>
-    </p>
-    <p>
-        <h1>A1:</h1>
-        <%= @poll.answer1 %>
-        <br>
-        <h1>A2:</h1>
-        <%= @poll.answer2 %>
-        <br>
-        <h1>A3:</h1>
-        <%= @poll.answer3 %>
-        <br>
-        <h1>A4:</h1>
-        <%= @poll.answer4 %>
-        <br>
-    </p>
+        <div class="choice">
+            <p>Question:</p>
+            <p><%= @poll.question %></p>
+        </div>
+        <div class="choice">
+        </div>
+        <div class="choice">
+            <p>OPTION 1:</p>
+            <p><%= @poll.answer1 %></p>
+        </div>
+        <div class="choice">
+            <p>OPTION 2:</p>
+            <p><%= @poll.answer2 %></p>
+        </div>
+        <div class="choice">
+            <p>OPTION 3:</p>
+            <p><%= @poll.answer3 %></p>
+        </div>
+        <div class="choice">
+            <p>OPTION 4:</p>
+            <p><%= @poll.answer4 %></p>
+        </div>
     
-    <%= link_to 'Delete', poll_path(@poll), method: :delete, data: { confirm: 'Are you sure?' } %>
-    <%= link_to 'Edit', edit_poll_path(@poll) %>
-    
+        <div class="choice">
+            <%= link_to 'Delete', poll_path(@poll), method: :delete, data: { confirm: 'Are you sure?' } %>
+            <%= link_to 'Edit', edit_poll_path(@poll) %>
+        </div>
 </div>
 
 <div id="footer">
