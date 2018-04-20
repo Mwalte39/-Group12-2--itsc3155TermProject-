@@ -10,23 +10,24 @@
 </div>
     
     <div id = "pollForm">
+    <h3>EDIT YOUR POLL:</h3>
     <div id="pollcontainer">
     <%= form_for @poll do |f| %>
     
-        <p>
+        <p id = "q">
             <%= f.text_field :question, :placeholder => "Enter Poll Name", :id => 'pollquestion'%>
         </p>
         <p id = "one">
-            <%= f.text_field :answer1, :placeholder => "Option 1"%> 
+            <%= f.text_field :answer1, :placeholder => "Option 1", :id => 'a1'%> 
         </p>
         <p id = "two">
-            <%= f.text_field :answer2, :placeholder => "Option 2" %> 
+            <%= f.text_field :answer2, :placeholder => "Option 2", :id => 'a2'%> 
         </p>
         <p id = "three">
-            <%= f.text_field :answer3, :placeholder => "Option 3" %> 
+            <%= f.text_field :answer3, :placeholder => "Option 3", :id => 'a3'%> 
         </p>
         <p id = "four">
-            <%= f.text_field :answer4, :placeholder => "Option 4" %> 
+            <%= f.text_field :answer4, :placeholder => "Option 4", :id => 'a4'%> 
         </p>
         <p>
             <%= f.submit %>

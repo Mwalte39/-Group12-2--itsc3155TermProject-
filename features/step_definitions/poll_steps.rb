@@ -13,3 +13,15 @@ end
 Then("I should see the {string} field") do |string|
   page.should have_css('p#'+string)
 end
+
+Then("I fill in {string} with {string}") do |id, text|
+  fill_in(id, :with => text)
+end
+
+When("I click on the {string} button") do |name|
+  click_button name
+end
+
+Then("I should see the {string} field with {string}") do |name, text|
+  expect(find_field(name).value).to eq text
+end
