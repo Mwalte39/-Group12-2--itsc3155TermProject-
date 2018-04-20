@@ -10,10 +10,11 @@
 </div>
 
 <div id = "pollForm">
+    <h3>CREATE A NEW POLL:</h3>
     <div id="pollcontainer">
     <%= form_for :poll, url: polls_path do |f| %>
     
-        <p>
+        <p id = "q">
             <%= f.text_field :question, :placeholder => "Enter Poll Name", :id => 'pollquestion' %>
         </p>
         <p id = "one">
