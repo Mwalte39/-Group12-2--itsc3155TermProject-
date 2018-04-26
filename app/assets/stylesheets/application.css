@@ -47,7 +47,7 @@ body {
 	text-align: center;
 	color: #9f216f;
 	bottom: 0;
-	position: relative;
+	position: fixed;
 }
 
 #footer p{

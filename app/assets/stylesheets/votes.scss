@@ -16,7 +16,7 @@
 }
 
 .option{
-	display: flex;
+	display: none;
 	flex-direction: row;
 	justify-content: space-between;
 	width: 500px;
@@ -69,4 +69,42 @@ button{
     font-size: 18px;
     font-weight: 300;
     padding: 10px;
+}
+
+//GRAPH CSS BELOW
+
+#graph {
+    background-color: #c71f3b;
+    width: 600px;
+    height: 500px;
+    display: flex;
+    flex-direction: row;
+    justify-content: space-around;
+    align-items: flex-end;
+}
+
+#graphtitles {
+    width: 600px;
+    font-size: 24pt;
+    color: #fcbc6d;
+    display: flex;
+    flex-direction: row;
+    justify-content: space-around;
+}
+
+#graphtitles p {
+    margin-top: 5px;
+}
+
+#bar1, #bar2, #bar3, #bar4{
+    height: 0px;
+    width: 100px;
+    background-color: #fec30d;
+}
+
+.shown {
+    display: flex;
+}
+#graphtoggle {
+    margin-bottom: 20px;
 }
