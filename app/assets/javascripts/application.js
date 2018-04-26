@@ -33,7 +33,7 @@ $(document).on("turbolinks:load", () => {
 
     //CALCULATE SOME THINGS
     var total = valbar1 + valbar2 + valbar3 + valbar4;
-    var relative_height = 490 / total;
+    var relative_height = 475 / total;
 
     $("#bar1").css("height", relative_height * valbar1);
     $("#bar2").css("height", relative_height * valbar2);
