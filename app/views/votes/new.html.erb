@@ -12,19 +12,19 @@
     <%= form_for([@poll, @poll.votes.build]) do |f| %>
         <p>POLL: <%= @poll.question %></p>
         
-        <div class="voteoption">
+        <div data-op1="<%= @poll.answer1 %>" id="op1" class="voteoption">
             <%= @poll.answer1 %>
             <%= f.radio_button :selection, '1', :checked => true %> 
         </div>
-        <div class="voteoption">
+        <div data-op2="<%= @poll.answer2 %>" id="op2" class="voteoption">
             <%= @poll.answer2 %>
             <%= f.radio_button :selection, '2' %> 
         </div>
-        <div class="voteoption">
+        <div data-op3="<%= @poll.answer3 %>" id="op3" class="voteoption">
             <%= @poll.answer3 %>
             <%= f.radio_button :selection, '3' %> 
         </div>
-        <div class="voteoption">
+        <div data-op4="<%= @poll.answer4 %>" id="op4" class="voteoption">
             <%= @poll.answer4 %>
             <%= f.radio_button :selection, '4' %>
         </div>

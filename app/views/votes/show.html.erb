@@ -13,22 +13,22 @@
     <div id = "results">
         <p id="titleresult">Results</p>
         <button id="graphtoggle">SWITCH VIEW</button> 
-        <div data-op1="<%= @poll.answer1 %>" class="option" id="op1">
+        <div data-op1="<%= @poll.answer1 %>" id="op1" class="option" >
             <p><%= @poll.answer1 %></p>
             <br>
             <p><%= @poll.votes.where(:selection => 1).count %></p>
         </div>
-        <div data-op2="<%= @poll.answer2 %>" class="option" id="op2">
+        <div data-op2="<%= @poll.answer2 %>" id="op2" class="option">
             <p><%= @poll.answer2 %></p>
             <br>
             <p><%= @poll.votes.where(:selection => 2).count %></p>
         </div>
-        <div data-op3="<%= @poll.answer3 %>" class="option" id="op3">
+        <div data-op3="<%= @poll.answer3 %>" id="op3" class="option">
             <p><%= @poll.answer3 %></p>
             <br>
             <p><%= @poll.votes.where(:selection => 3).count %></p>
         </div>
-        <div data-op4="<%= @poll.answer4 %>" class="option" id="op4">
+        <div data-op4="<%= @poll.answer4 %>" id="op4" class="option">
             <p><%= @poll.answer4 %></p>
             <br>
             <p><%= @poll.votes.where(:selection => 4).count %></p>
