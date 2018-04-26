@@ -13,22 +13,22 @@
     <div id = "results">
         <p id="titleresult">Results</p>
         <button id="graphtoggle">SWITCH VIEW</button> 
-        <div class="option">
+        <div data-op1="<%= @poll.answer1 %>" class="option" id="op1">
             <p><%= @poll.answer1 %></p>
             <br>
             <p><%= @poll.votes.where(:selection => 1).count %></p>
         </div>
-        <div class="option">
+        <div data-op2="<%= @poll.answer2 %>" class="option" id="op2">
             <p><%= @poll.answer2 %></p>
             <br>
             <p><%= @poll.votes.where(:selection => 2).count %></p>
         </div>
-        <div class="option">
+        <div data-op3="<%= @poll.answer3 %>" class="option" id="op3">
             <p><%= @poll.answer3 %></p>
             <br>
             <p><%= @poll.votes.where(:selection => 3).count %></p>
         </div>
-        <div class="option">
+        <div data-op4="<%= @poll.answer4 %>" class="option" id="op4">
             <p><%= @poll.answer4 %></p>
             <br>
             <p><%= @poll.votes.where(:selection => 4).count %></p>
@@ -42,10 +42,10 @@
             <div id="bar4" data-bar4num="<%= @poll.votes.where(:selection => 4).count %>"></div>
         </div>
         <div id="graphtitles">
-            <p><%= @poll.answer1 %> : <%= @poll.votes.where(:selection => 1).count %></p>
-            <p><%= @poll.answer2 %> : <%= @poll.votes.where(:selection => 2).count %></p>
-            <p><%= @poll.answer3 %> : <%= @poll.votes.where(:selection => 3).count %></p>
-            <p><%= @poll.answer4 %> : <%= @poll.votes.where(:selection => 4).count %></p>
+            <p id="title1"><%= @poll.answer1 %> : <%= @poll.votes.where(:selection => 1).count %></p>
+            <p id="title2"><%= @poll.answer2 %> : <%= @poll.votes.where(:selection => 2).count %></p>
+            <p id="title3"><%= @poll.answer3 %> : <%= @poll.votes.where(:selection => 3).count %></p>
+            <p id="title4"><%= @poll.answer4 %> : <%= @poll.votes.where(:selection => 4).count %></p>
         </div>
     </div>
     
