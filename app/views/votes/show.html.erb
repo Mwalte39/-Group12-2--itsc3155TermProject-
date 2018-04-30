@@ -33,7 +33,6 @@
             <br>
             <p><%= @poll.votes.where(:selection => 4).count %></p>
         </div>
-        
         <!--BAR GRAPH HERE-->
         <div id="graph">
             <div id="bar1" data-bar1num="<%= @poll.votes.where(:selection => 1).count %>"></div>

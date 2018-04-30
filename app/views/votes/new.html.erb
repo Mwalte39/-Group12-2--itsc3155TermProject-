@@ -10,26 +10,41 @@
 
 <div id="votecontainer">
     <%= form_for([@poll, @poll.votes.build]) do |f| %>
-        <p>POLL: <%= @poll.question %></p>
+        <% if(current_user) %>
+            <% if(((@poll.votes.find_by( :userID => current_user.uid, :poll_id => @poll.id )) != nil)) %>
+                <center>
+                <h3> You Have Already Voted! </h3>
+                <p><%= link_to 'Click Here To View The Results', poll_vote_path(@poll, @poll.id) %></p>
+                </center>
+            <% else %>
+                <p>POLL: <%= @poll.question %></p>
+                <div data-op1="<%= @poll.answer1 %>" id="op1" class="voteoption">
+                    <%= @poll.answer1 %>
+                    <%= f.radio_button :selection, '1', :checked => true %> 
+                </div>
+                <div data-op2="<%= @poll.answer2 %>" id="op2" class="voteoption">
+                    <%= @poll.answer2 %>
+                    <%= f.radio_button :selection, '2' %> 
+                </div>
+                <div data-op3="<%= @poll.answer3 %>" id="op3" class="voteoption">
+                    <%= @poll.answer3 %>
+                    <%= f.radio_button :selection, '3' %> 
+                </div>
+                <div data-op4="<%= @poll.answer4 %>" id="op4" class="voteoption">
+                <%= @poll.answer4 %>
+                <%= f.radio_button :selection, '4' %>
+                </div>
+                <%= f.hidden_field :userID, :value => current_user.uid %>
+                <p><%= f.button :submit, name: ":poll_id", value: @poll.id %></p>
+            <% end %>   
+        <% else %>
+        <center>
+            <h3>You Must Be Signed in to Vote:</h3>
+            <p><%= link_to "Sign in with Google", "/auth/google_oauth2", id: "sign_in" %></p>
+        </center>
+        <% end %>
         
-        <div data-op1="<%= @poll.answer1 %>" id="op1" class="voteoption">
-            <%= @poll.answer1 %>
-            <%= f.radio_button :selection, '1', :checked => true %> 
-        </div>
-        <div data-op2="<%= @poll.answer2 %>" id="op2" class="voteoption">
-            <%= @poll.answer2 %>
-            <%= f.radio_button :selection, '2' %> 
-        </div>
-        <div data-op3="<%= @poll.answer3 %>" id="op3" class="voteoption">
-            <%= @poll.answer3 %>
-            <%= f.radio_button :selection, '3' %> 
-        </div>
-        <div data-op4="<%= @poll.answer4 %>" id="op4" class="voteoption">
-            <%= @poll.answer4 %>
-            <%= f.radio_button :selection, '4' %>
-        </div>
         
-        <p><%= f.button :submit, name: ":poll_id", value: @poll.id %></p>
     <% end %>
 </div>
 <div id="footer">
