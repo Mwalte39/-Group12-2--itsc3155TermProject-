@@ -25,3 +25,15 @@ end
 Then("I should see the {string} field with {string}") do |name, text|
   expect(find_field(name).value).to eq text
 end
+
+When("I go to vote on my poll") do
+  visit new_poll_vote_url(1)
+end
+
+When("I click on the {string} radio button") do |name|
+  choose(name, option: "1")
+end
+
+Then("I should see {string}") do |vote|
+  page.should have_content(vote)
+end
