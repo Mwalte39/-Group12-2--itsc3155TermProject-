@@ -43,5 +43,5 @@ end
 
 private
     def poll_params
-       params.require(:poll).permit(:question, :answer1, :answer2, :answer3, :answer4) 
+       params.require(:poll).permit(:question, :answer1, :answer2, :answer3, :answer4, :creatorID) 
     end

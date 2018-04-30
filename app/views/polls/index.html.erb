@@ -15,7 +15,10 @@
         <% @polls.each do |poll| %>
             <div class="singlepoll">
                 <p>POLL: <%= poll.question %>
+                
+                <% if (poll.creatorID == current_user.uid) %>
                 <p><%= link_to 'Manage Poll', poll_path(poll) %></p>
+                <% end %>
                 <p><%= link_to 'Vote', new_poll_vote_url(poll) %></p>
                 <p><%= link_to 'Results', poll_vote_path(poll, poll.id) %></p>
             </div>

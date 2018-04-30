@@ -10,29 +10,34 @@
 </div>
 
 <div id = "pollForm">
-    <h3>CREATE A NEW POLL:</h3>
+    
     <div id="pollcontainer">
     <%= form_for :poll, url: polls_path do |f| %>
-    
-        <p id = "q">
-            <%= f.text_field :question, :placeholder => "Enter Poll Name", :id => 'pollquestion' %>
-        </p>
-         <p id = "one">
-            <%= f.text_field :answer1, :placeholder => "Option 1", :id => 'a1'%> 
-        </p>
-        <p id = "two">
-            <%= f.text_field :answer2, :placeholder => "Option 2", :id => 'a2'%> 
-        </p>
-        <p id = "three">
-            <%= f.text_field :answer3, :placeholder => "Option 3", :id => 'a3'%> 
-        </p>
-        <p id = "four">
-            <%= f.text_field :answer4, :placeholder => "Option 4", :id => 'a4'%> 
-        </p>
-        <p>
-            <%= f.submit %>
-        </p>
-        
+        <% if(current_user) %>
+        <center><h3>CREATE A NEW POLL:</h3></center>
+            <p id = "q">
+                <%= f.text_field :question, :placeholder => "Enter Poll Name", :id => 'pollquestion' %>
+            </p>
+             <p id = "one">
+                <%= f.text_field :answer1, :placeholder => "Option 1", :id => 'a1'%> 
+            </p>
+            <p id = "two">
+                <%= f.text_field :answer2, :placeholder => "Option 2", :id => 'a2'%> 
+            </p>
+            <p id = "three">
+                <%= f.text_field :answer3, :placeholder => "Option 3", :id => 'a3'%> 
+            </p>
+            <p id = "four">
+                <%= f.text_field :answer4, :placeholder => "Option 4", :id => 'a4'%> 
+            </p>
+            <p>
+                <%= f.hidden_field :creatorID, :value => current_user.uid %>
+                <%= f.submit %>
+            </p>
+        <% else %>
+            <h3>You Must Be Signed in to Create a Poll:</h3>
+            <p><%= link_to "Sign in with Google", "/auth/google_oauth2", id: "sign_in" %></p>
+        <% end %>
     <% end %>
     </div>
 </div>
